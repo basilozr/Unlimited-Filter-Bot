@@ -30,5 +30,5 @@ class Script(object):
 • <b>Creater :</b> <a href='t.me/mrdlx/'>Dāwôöd ഇബ്രാഹിം</a>    
 • <b>Language :</b> <code>Python3</code>
 • <b>Library :</b> <a href='https://docs.pyrogram.org/'>Pyrogram 1.0.7</a> 
-• <b>Support : </b> <a href='t.m/grafx_Design'>Grafx Design</a> 
+• <b>Support : </b> <a href='t.me/grafx_Design'>Grafx Design</a> 
 """
