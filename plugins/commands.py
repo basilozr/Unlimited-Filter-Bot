@@ -283,13 +283,17 @@ ALL_PIC = [
  "https://telegra.ph/file/7796506907b50c119d070.jpg"
 ]
 
+CONTACT = [
+ """ HI
+BRO"""
+]
 
 
 @trojanz.on_message(filters.command("Contact"))
 async def start_message(bot, message):
     await message.reply_photo(
         photo=random.choice(ALL_PIC),
-        caption="Enter Your Text Here",
+        caption="CONTACT",
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("Button 1", url="t.me/mrdlx"),
             InlineKeyboardButton("button 2", url="t.me/mrdlx")
