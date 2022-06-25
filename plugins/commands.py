@@ -9,6 +9,7 @@ import requests
 from pyrogram import filters
 from pyrogram import Client as trojanz
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+import random
 
 if bool(os.environ.get("WEBHOOK", False)):
     from sample_config import Config
@@ -275,3 +276,25 @@ async def about(client, message):
         ),
         reply_to_message_id=message.message_id
     )
+
+ALL_PIC = [
+ "https://telegra.ph/file/820c7ee3066cb299b8665.jpg",
+ "https://telegra.ph/file/66df56efed76680fce07b.jpg",
+ "https://telegra.ph/file/7796506907b50c119d070.jpg"
+]
+
+
+
+@trojanz.on_message(filters.command("Contact"))
+async def start_message(bot, message):
+    await message.reply_photo(
+        photo=random.choice(ALL_PIC),
+        caption="Enter Your Text Here",
+        reply_markup=InlineKeyboardMarkup( [[
+            InlineKeyboardButton("Button 1", url="t.me/mrdlx"),
+            InlineKeyboardButton("button 2", url="t.me/mrdlx")
+            ],[
+            InlineKeyboardButton("Button 3", url="t.me/mrdlx")
+            ]]
+            )
+        )
